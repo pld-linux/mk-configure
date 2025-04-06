@@ -19,6 +19,9 @@ Requires:	bmake
 Requires:	mk-files
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+# not noarch due to stored compiler configuration...
+%define		_enable_debug_packages	0
+
 %description
 mk-configure is a build system, written in and for bmake (portable
 version of NetBSD make) and UNIX tools (shell, awk etc.).
